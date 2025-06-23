@@ -1,6 +1,6 @@
 ﻿using BusinessEntities;
 
-namespace WebApi.Models.Users
+namespace WebApi_new.Models.Users
 {
     public class UserData : IdObjectData
     {

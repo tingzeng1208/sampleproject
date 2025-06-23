@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Web.Http;
 using BusinessEntities;
 using Core.Services.Users;
-using WebApi.Models.Users;
+using WebApi_new.Models.Users;
 
 namespace WebApi_new.Controllers
 {

@@ -1,7 +1,7 @@
 using System;
 using Common.Extensions;
 
-namespace WebApi.Models
+namespace WebApi_new.Models
 {
     public class EnumData
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using BusinessEntities;
 
-namespace WebApi.Models
+namespace WebApi_new.Models
 {
     public abstract class IdObjectData
     {

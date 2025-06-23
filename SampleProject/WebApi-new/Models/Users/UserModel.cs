@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using BusinessEntities;
 
-namespace WebApi.Models.Users
+namespace WebApi_new.Models.Users
 {
     public class UserModel
     {
