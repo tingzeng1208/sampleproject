@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "26c5397e-2163-4643-ae23-13c5eb581e25",
+		"_postman_id": "009dd8f3-414b-459b-9ac3-559be31c43ff",
 		"name": "LendingPad-SampleProject",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30292534"
+		"_exporter_id": "9721137"
 	},
 	"item": [
 		{
@@ -44,15 +44,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:49834/users/1422740e-6426-4c46-8445-3f5274a62424/create",
-							"protocol": "http",
+							"raw": "https://localhost:44390/users/6422740e-6426-4c46-8445-3f5274a62424/create",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
-							"port": "49834",
+							"port": "44390",
 							"path": [
 								"users",
-								"1422740e-6426-4c46-8445-3f5274a62424",
+								"6422740e-6426-4c46-8445-3f5274a62424",
 								"create"
 							]
 						}
@@ -104,12 +104,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:49834/users/8722740e-6426-4c46-8445-3f5274a62424/create",
-							"protocol": "http",
+							"raw": "https://localhost:44390/users/8722740e-6426-4c46-8445-3f5274a62424/create",
+							"protocol": "https",
 							"host": [
 								"localhost"
 							],
-							"port": "49834",
+							"port": "44390",
 							"path": [
 								"users",
 								"8722740e-6426-4c46-8445-3f5274a62424",
@@ -278,7 +278,239 @@
 			"item": [
 				{
 					"name": "Products",
-					"item": []
+					"item": [
+						{
+							"name": "Create Product - portable",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Portable Speaker\",\r\n  \"manufacturer\": \"SoundTech Inc.\",\r\n  \"price\": 49.99,\r\n  \"inventory\": 200,\r\n  \"tags\": [\"electronics\", \"audio\", \"portable\"]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44390/products/3f5d94c7-59a1-4c5a-aeb9-45d0c9e8f0b1/create",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44390",
+									"path": [
+										"products",
+										"3f5d94c7-59a1-4c5a-aeb9-45d0c9e8f0b1",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product - lights",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Smart Desk Lamp\",\r\n  \"manufacturer\": \"BrightLife Co.\",\r\n  \"price\": 29.95,\r\n  \"inventory\": 150,\r\n  \"tags\": [\"electronics\", \"lighting\", \"smart-home\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44390/products/3f5d94c7-59a1-4c5a-aeb9-45d0c9e8f0b1/create",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44390",
+									"path": [
+										"products",
+										"3f5d94c7-59a1-4c5a-aeb9-45d0c9e8f0b1",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product - keyboards",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Smart Desk Lamp\",\r\n  \"manufacturer\": \"BrightLife Co.\",\r\n  \"price\": 29.95,\r\n  \"inventory\": 150,\r\n  \"tags\": [\"electronics\", \"lighting\", \"smart-home\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44390/products/3f5d94c7-59a1-4c5a-aeb9-45d0c9e8f0b1/create",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44390",
+									"path": [
+										"products",
+										"3f5d94c7-59a1-4c5a-aeb9-45d0c9e8f0b1",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product -- add inventory",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Portable Speaker\",\r\n  \"manufacturer\": \"SoundTech Inc.\",\r\n  \"price\": 49.99,\r\n  \"inventory\": 150,\r\n  \"tags\": [\"electronics\", \"audio\", \"portable\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:49834/products/3f5d94c7-59a1-4c5a-aeb9-45d0c9e8f0b1/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "49834",
+									"path": [
+										"products",
+										"3f5d94c7-59a1-4c5a-aeb9-45d0c9e8f0b1",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get A Product",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Get Product list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44390/products/list?name=Keyboard&skip=0&take=10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44390",
+									"path": [
+										"products",
+										"list"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Keyboard"
+										},
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "take",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete A Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44390/products/df2400f6-b4e6-421c-9aa2-5d356b340dce/delete",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44390",
+									"path": [
+										"products",
+										"df2400f6-b4e6-421c-9aa2-5d356b340dce",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete All",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44390/products/df2400f6-b4e6-421c-9aa2-5d356b340dce/delete",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44390",
+									"path": [
+										"products",
+										"df2400f6-b4e6-421c-9aa2-5d356b340dce",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Products By Tag",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44390/products/list/tag?tag=electronics",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44390",
+									"path": [
+										"products",
+										"list",
+										"tag"
+									],
+									"query": [
+										{
+											"key": "tag",
+											"value": "electronics"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				},
 				{
 					"name": "Orders",
