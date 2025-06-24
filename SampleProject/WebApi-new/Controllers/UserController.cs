@@ -65,6 +65,10 @@ namespace WebApi_new.Controllers
         public HttpResponseMessage GetUser(Guid userId)
         {
             var user = _getUserService.GetUser(userId);
+            if (user != null)
+            {
+                return EmptyResult();
+            }
             return Found(new UserData(user));
         }
 

@@ -71,8 +71,12 @@ namespace WebApi.Controllers
         [HttpGet]
         public HttpResponseMessage GetProduct(Guid productId)
         {
-            var Product = _getProductService.GetProduct(productId);
-            return Found(new ProductData(Product));
+            var product = _getProductService.GetProduct(productId);
+            if (product == null)
+            {
+                return EmptyResult();
+            }
+            return Found(new ProductData(product));
         }
 
         [Route("list")]

@@ -192,6 +192,7 @@
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -199,6 +200,8 @@
     </Compile>
     <Compile Include="Models\EnumData.cs" />
     <Compile Include="Models\IdObjectData.cs" />
+    <Compile Include="Models\Orders\OrderData.cs" />
+    <Compile Include="Models\Orders\OrderModel.cs" />
     <Compile Include="Models\Products\ProductData.cs" />
     <Compile Include="Models\Products\ProductModel.cs" />
     <Compile Include="Models\Users\UserData.cs" />
@@ -273,7 +276,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Orders\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\bootstrap.min.js.map" />

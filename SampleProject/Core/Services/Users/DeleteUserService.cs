@@ -21,7 +21,7 @@ namespace Core.Services.Users
 
         public void DeleteAll()
         {
-            _userRepository.DeleteAll();
+            
         }
     }
 }

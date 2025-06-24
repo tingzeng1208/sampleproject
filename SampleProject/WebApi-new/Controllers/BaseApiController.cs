@@ -20,5 +20,10 @@ namespace WebApi_new.Controllers
         {
             return ControllerContext.Request.CreateResponse(HttpStatusCode.NotFound);
         }
+
+        public HttpResponseMessage EmptyResult()
+        {
+            return ControllerContext.Request.CreateResponse(HttpStatusCode.OK, "No match found");
+        }
     }
 }
