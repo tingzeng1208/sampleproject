@@ -1,4 +1,5 @@
 ﻿using BusinessEntities;
+using System.Collections.Generic;
 
 namespace WebApi_new.Models.Users
 {
@@ -11,6 +12,7 @@ namespace WebApi_new.Models.Users
             Type = new EnumData(user.Type);
             MonthlySalary = user.MonthlySalary;
             Age = user.Age;
+            Tags = user.Tags;
         }
 
         public string Name { get; set; }
@@ -18,5 +20,7 @@ namespace WebApi_new.Models.Users
         public EnumData Type { get; set; }
         public decimal? MonthlySalary { get; set; }
         public int Age { get; set; }
+
+        public IEnumerable<string> Tags { set; get; }
     }
 }

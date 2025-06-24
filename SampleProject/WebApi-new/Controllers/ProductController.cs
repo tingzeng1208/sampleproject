@@ -14,19 +14,25 @@ using Core.Services.products;
 
 namespace WebApi.Controllers
 {
+    [RoutePrefix("products")]
     public class ProductController : BaseApiController
     {
         private readonly ICreateProductService _createProductService;
-        private readonly IDeleteUserService _deleteUserService;
+        private readonly IDeleteProductService _deleteUserService;
         private readonly IGetUserService _getUserService;
         private readonly IUpdateUserService _updateUserService;
 
-        public ProductController(ICreateProductService createProductService, IDeleteUserService deleteUserService, IGetUserService getUserService, IUpdateUserService updateUserService)
+        //public ProductController(ICreateProductService createProductService, IDeleteUserService deleteUserService, IGetUserService getUserService, IUpdateUserService updateUserService)
+        //{
+           // _createProductService = createProductService;
+           // _deleteUserService = deleteUserService;
+           // _getUserService = getUserService;
+           //_updateUserService = updateUserService;
+        //}
+
+        public ProductController(ICreateProductService createProductService)
         {
             _createProductService = createProductService;
-            _deleteUserService = deleteUserService;
-            _getUserService = getUserService;
-            _updateUserService = updateUserService;
         }
 
         [Route("{productId:guid}/create")]

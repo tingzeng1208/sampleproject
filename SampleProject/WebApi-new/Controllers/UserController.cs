@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Net.Http;
+using System.Web.Helpers;
 using System.Web.Http;
+using System.Xml.Linq;
 using BusinessEntities;
 using Core.Services.Users;
 using WebApi_new.Models.Users;
@@ -89,7 +91,15 @@ namespace WebApi_new.Controllers
         [HttpGet]
         public HttpResponseMessage GetUsersByTag(string tag)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(tag))
+            {
+                return DoesNotExist();
+            }
+            var users = _getUserService.GetUsers(null, null, null, tag)
+                                       .ToList();
+
+            var userDataList = users.Select(u => new UserData(u));
+            return Found(userDataList);
         }
     }
 }

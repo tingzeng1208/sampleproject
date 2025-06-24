@@ -47,5 +47,23 @@ namespace BusinessEntities
             }
             _manufacturer = manufacturer;
         }
+
+        public void setPrice(decimal price)
+        {
+            if (price > 0)
+            {
+                _price = price;
+            }
+        }
+
+        public void SetInventory(int inventory)
+        {
+            _inventory = inventory;
+        }
+
+        public void SetTags(IEnumerable<string> tags)
+        {
+            _tags.Initialize(tags);
+        }
     }
 }
