@@ -22,7 +22,7 @@ namespace Core.Services.products
             return _productRepository.Get(id);
         }
 
-        public IEnumerable<Product> GetProducts(string name = null, string manufacturer = null)
+        public IEnumerable<Product> GetProducts(string name = null, string manufacturer = null, string tag = null)
         {
             return _productRepository.Get(name, manufacturer);
         }

@@ -9,7 +9,7 @@ namespace Core.Services.products
     {
         Product GetProduct(Guid id);
 
-        IEnumerable<Product> GetProducts(string name = null, string manufacturer = null);
+        IEnumerable<Product> GetProducts(string name = null, string manufacturer = null, string tag = null);
 
     }
 }

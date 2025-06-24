@@ -17,7 +17,8 @@ namespace Data.Indexes
                            {
                                product.Name,
                                product.Manufacturer,
-                               product.Inventory
+                               product.Inventory,
+                               product.Tags
                            };
 
             Index(x => x.Name, FieldIndexing.NotAnalyzed);

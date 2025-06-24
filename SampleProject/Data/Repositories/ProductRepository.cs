@@ -18,7 +18,7 @@ namespace Data.Repositories
             _documentSession = documentSession;
         }
 
-        public IEnumerable<Product> Get(string name = null, string manufacturer = null)
+        public IEnumerable<Product> Get(string name = null, string manufacturer = null, string tag = null)
         {
             var query = _documentSession.Advanced.DocumentQuery<Product, ProductsListIndex>();
 
@@ -36,7 +36,16 @@ namespace Data.Repositories
                     query = query.AndAlso();
 
                 query = query.WhereEquals("Manufacturer", manufacturer);
-            }            
+            }
+
+            if (tag != null)
+            {
+                if (hasFirstParameter)
+                {
+                    query = query.AndAlso();
+                }
+                query = query.WhereEquals("Tags", tag);
+            }
 
             return query.ToList();
         }

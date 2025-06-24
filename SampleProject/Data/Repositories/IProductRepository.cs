@@ -6,7 +6,7 @@ namespace Core.Services.products
 {
     public interface IProductRepository : IRepository<Product>
     {
-        IEnumerable<Product> Get(string name = null, string manufacturer = null);
+        IEnumerable<Product> Get(string name = null, string manufacturer = null, string tag = null);
         void DeleteAll();
     }
 }
