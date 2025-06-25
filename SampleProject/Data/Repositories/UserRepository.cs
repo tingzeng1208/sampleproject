@@ -7,7 +7,7 @@ using Raven.Client;
 
 namespace Data.Repositories
 {
-    [AutoRegister]
+    //[AutoRegister]
     public class UserRepository : Repository<User>, IUserRepository
     {
         private readonly IDocumentSession _documentSession;
